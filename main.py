@@ -453,7 +453,7 @@ def setting():
             return
         # Si aucun nom n'est entrée et que les couleurs sont trop proche (module webcolors renvoient le même nom), oblige le joueur à entrer un nom
         if (len(userNameColorVAR["1"].get())==0 and len(userNameColorVAR["2"].get())==0):
-            if userColor("#"+hexcolorVAR["1"].get() if len(hexcolorVAR["1"].get()) == 6 else "ff0000" )==userColor("#"+hexcolorVAR["2"].get() if len(hexcolorVAR["2"].get())==6 else "#f3c200"):
+            if userColor("#"+hexcolorVAR["1"].get() if len(hexcolorVAR["1"].get()) == 6 else "#ff0000" )==userColor("#"+hexcolorVAR["2"].get() if len(hexcolorVAR["2"].get())==6 else "#f3c200"):
                 messagebox.showwarning("Attention !", "Les deux joueurs ont une couleur trop proche !\nMerci de prendre des couleurs plus éloigné ou de mettre des noms personnalisés.")
                 return
             
